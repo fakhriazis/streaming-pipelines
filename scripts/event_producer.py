@@ -10,7 +10,8 @@ from time import sleep
 from datetime import datetime, timedelta
 
 dotenv_path = Path("/opt/app/.env")
-load_dotenv(dotenv_path=dotenv_path)
+load_dotenv(dotenv_path=dotenv_path, override=True)
+
 
 kafka_host = os.getenv("KAFKA_HOST")
 kafka_topic = os.getenv("KAFKA_TOPIC_NAME")
